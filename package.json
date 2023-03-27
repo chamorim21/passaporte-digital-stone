@@ -34,11 +34,6 @@
     "lint": "mamba app lint",
     "format": "mamba app format"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "linters": {
       "*.{html,svelte}": [
@@ -66,7 +61,6 @@
     "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "http-server": "^0.11.1",
-    "husky": "^1.1.2",
     "lint-staged": "^8.0.4",
     "postcss": "^7.0.5",
     "prettier": "^1.14.3",
