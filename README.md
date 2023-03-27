@@ -1,88 +1,19 @@
-# Mamba App template
+# Passaporte Digital Stone
 
-> A complete project template for building [Mamba](https://github.com/stone-payments/pos-mamba) apps.
+Esse repositório contempla o desenvolvimento de uma aplicação em andamento.
+Tal aplicação consiste-se em um projeto escrito com MambaSDK e Svelte v2 a fim de ser executado em uma maquininha de cartão Stone.
 
-## Requirements
+A finalidade desse projeto é permitir a comercialização de ingressos de eventos por meio da maquininha, dispensando o uso de qualquer outro dispositivo. 
+Como a maquininha têm suporte nativo a pagamentos, todo o processo de vendas de ingressos poderia ser unificado nesse dispositivo, desde a escolha do ingresso até o pagamento.
 
-Make sure all dependencies have been installed before moving on:
+## Demonstração:
+https://user-images.githubusercontent.com/63121316/228039571-bfbc3bb6-6cc3-47d0-8f12-0cdcd0be1fe7.mp4
 
-- [Node.js](http://nodejs.org/) >= v8.11.3
+Para a criação e o desenvolvimento desse projeto, foram consultadas a documentação do [MambaSDK](https://mambasdk-docs.stone.com.br/) e do [Svelte v2](https://v2.svelte.dev/).
 
-Recommended:
+## Rodando o projeto:
 
-- [@mamba/cli](https://www.npmjs.com/package/@mamba/cli)
+Para rodar o projeto, é preciso fazer a instalação das dependências por meio do comando `npm install`.
+Feito isso, basta rodar `npm start` e a aplicação será subida com o endereço `http://localhost:8080`, sendo permitida a visualização em tempo real do que está descrito no código. 
 
-## Creating a new Mamba App
-
-### With `@mamba/cli`
-
-```shell
-# Install the mamba cli globally if doesn't already have it
-npm i -g @mamba/cli
-
-# Create a new mamba app at 'my-mamba-app' directory
-mamba new app my-mamba-app
-
-? Name: My Mamba App
-? Version: 0.0.1
-? Description: My new Mamba app
-
-# Enter the app directory
-cd my-mamba-app
-
-# Start the development server
-mamba app start
-```
-
-### Manually
-
-```shell
-# Create and enter your new app directory
-mkdir my-mamba-app
-cd my-mamba-app
-
-# Install the standard mamba app template
-npx degit stone-payments/pos-mamba-app-template
-
-# Install its dependencies with 'yarn'
-npm i
-
-# Run the development server
-npm run start
-```
-
-## Building and deploying to the `POS`
-
-1. Generate the *production* app bundle
-
-```shell
-# With the @mamba/cli
-mamba app build
-
-# Without the @mamba/cli
-npm run build
-```
-
-This will generate the `dist/bundle.pos` directory and a `dist/bundle.pos.tar.gz` file, which both contains your Mamba app.
-
-2. Start the local http server
-
-```shell
-npm run serve # Starts the local http server
-```
-
-3. Open the `Develop` app and insert your local server ip and the app will automatically look for the `dist/bundle.pos.tar.gz` and install it.
-
-### Npm Commands
-
-- `npm run start` - Start the dev server;
-- `npm run serve` - Start a local http server;
-- `npm run build` - Build the production bundle;
-- `npm run build:dev` - Build the development bundle;
-- `npm run build:analyze` - Analyze the final bundle;
-- `npm run lint` - Lint all style and script files;
-- `npm run format` - Format all style and script files;
-
-## Documentation
-
-- [Svelte](https://svelte.technology/guide)
+Lembrando que é necessário ter o node e o npm instalados na máquina.
