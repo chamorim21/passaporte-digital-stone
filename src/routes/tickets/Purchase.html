@@ -1,0 +1,61 @@
+<Input label="Nome"
+alphanumeric
+bind:value="name"
+autofocus
+on:submit="refs.ageInput.focus()"
+/>
+
+<Input label="Idade"
+ref:ageInput
+bind:value="age"
+validateOn="input"
+
+/>
+<span>{quantity}</span>
+<Button
+  on:click="set({ quantity: quantity + 1 })"
+  >
+  Aumentar
+
+</Button>
+
+<Button
+  on:click="set({ quantity: quantity - 1 })"
+  >
+  Diminuir
+
+</Button>
+
+<Button on:click="refs.printableContent.print()" bottom size="full">
+  Pagar
+</Button>
+
+
+<Printable ref:printableContent dithering="{true}">
+  Baile da Santinha
+  <QRCode/>
+</Printable>
+
+
+<script>
+  export default {
+    components: {
+      Button: '@mamba/button',
+      Printable: '@mamba/printable',
+      Input: '@mamba/input',
+      QRCode: '@mamba/qrcode',
+    },
+    data() {
+      return {
+        name: '',
+        age: '',
+        quantity: 0,
+      };
+    },
+  };
+</script>
+
+
+<style>
+
+</style>

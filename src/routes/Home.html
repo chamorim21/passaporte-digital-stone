@@ -1,4 +1,4 @@
-<AppBarModifier title="CookBook" />
+<AppBarModifier title="Passaporte Digital" />
 
 {#each cookbook as receipt, n}
   <div class="receipt" on:click="goTo(receipt.path)">
@@ -16,24 +16,9 @@
       return {
         cookbook: [
           {
-            imgPath: './assets/images/icons/requests.svg',
-            caption: 'Request GET',
-            path: '/1-request-get',
-          },
-          {
-            imgPath: './assets/images/icons/requests.svg',
-            caption: 'Request POST',
-            path: '/2-request-post',
-          },
-          {
-            imgPath: './assets/images/icons/database.svg',
-            caption: 'Dados',
-            path: '/3-dados',
-          },
-          {
             imgPath: './assets/images/icons/receipt.svg',
-            caption: 'Impressão',
-            path: '/4-impressao',
+            caption: 'Ingressos',
+            path: '/tickets',
           },
         ],
       };

@@ -1,0 +1,37 @@
+<div class="ticket-data">
+  <h2>{name}</h2>
+  <p>{description}</p>
+  <p>R$ {price}</p>
+</div>
+
+<Button on:click="goToBuyScreen()" bottom size="full">
+  Comprar
+</Button>
+
+
+<script>
+  export default {
+    components: {
+      Button: '@mamba/button',
+    },
+    methods: {
+      goToBuyScreen() {
+        this.root.router.go(`/tickets/${this.options.data.id}/purchase`, this.options.data);
+      },
+    },
+  };
+</script>
+
+
+<style>
+  .ticket-data {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .ticket-data h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>
